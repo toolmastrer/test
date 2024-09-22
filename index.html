@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>iQOO Z6 Lite Exclusive App</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin-top: 50px;
+        }
+    </style>
+</head>
+<body>
+    <div id="content"></div>
+    
+    <script>
+        function isIQOOZ6Lite() {
+            return navigator.userAgent.includes("iQOO Z6 Lite");
+        }
+
+        window.onload = function() {
+            const contentDiv = document.getElementById('content');
+            if (isIQOOZ6Lite()) {
+                contentDiv.innerHTML = "<h1>Welcome to the iQOO Z6 Lite Exclusive App!</h1>";
+            } else {
+                contentDiv.innerHTML = "<h1>Access Denied</h1><p>This app is only available on iQOO Z6 Lite.</p>";
+            }
+        };
+    </script>
+</body>
+</html>
